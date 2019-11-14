@@ -41,28 +41,27 @@ FROM first_table, second_table;
 DROP TABLE table_one;
 
 CREATE TABLE table_one (
-	id INT
+	id SERIAL PRIMARY KEY
 );
 
-INSERT INTO table_one (id) 
-VALUES (1),
-(2),
-(3),
-(4);
+INSERT INTO table_one DEFAULT VALUES;
+INSERT INTO table_one DEFAULT VALUES;
+INSERT INTO table_one DEFAULT VALUES;
+INSERT INTO table_one DEFAULT VALUES;
 
 SELECT * FROM table_one;
 
 DROP TABLE table_two;
 
 CREATE TABLE table_two (
-	id INT
+	id SERIAL PRIMARY KEY
 );
 
-INSERT INTO table_two (id) 
-VALUES (10),
-(11),
-(12);
+ALTER SEQUENCE table_two_id_seq RESTART WITH 10 INCREMENT BY 1;
+INSERT INTO table_two DEFAULT VALUES;
+INSERT INTO table_two DEFAULT VALUES;
+INSERT INTO table_two DEFAULT VALUES;
 
-SELECT * FROM table_two
+SELECT * FROM table_two;
 
 SELECT * FROM table_one, table_two

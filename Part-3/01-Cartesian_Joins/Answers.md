@@ -13,12 +13,14 @@
   FROM second_table;
   ```
 
-* What will be the number of rows in the output of the following query?
+* What will be the number of rows in the output of the following query? __250 rows.__
 
   ```sql
   SELECT *
   FROM first_table, second_table;
   ```  
+
+
 
 ### Part 2
 
@@ -32,4 +34,4 @@
 
 * What will the query `SELECT * FROM table_one, table_two;` look like?
 
-* _You can use pgAdmin and create a new table to test out this activity_
+    ![Joins.png](Joins.png)
